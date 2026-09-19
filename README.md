@@ -64,7 +64,7 @@ Click the green **Code** button on GitHub, select **Download ZIP**, extract the 
 **Option 2: Clone with Git**
 
 ```bash
-git clone https://github.com/RPSlab/GraftCal.git
+git clone https://github.com/RPSLabURI/GraftCal.git
 cd GraftCal
 ```
 
