@@ -1,4 +1,4 @@
-classdef GraftCalV2 < matlab.apps.AppBase
+classdef GraftCal < matlab.apps.AppBase
     properties (Access = public)
         UIFigure
         ButtonPanel
@@ -36,7 +36,7 @@ classdef GraftCalV2 < matlab.apps.AppBase
     end
 
     methods (Access = public)
-        function app = GraftCalV2()
+        function app = GraftCal()
             app.createUI();
             registerApp(app, app.UIFigure);
             app.initializeApp();
@@ -123,7 +123,7 @@ classdef GraftCalV2 < matlab.apps.AppBase
                 app.ParamFields{i}.Value = defaults(i);
             end
             
-            app.addLog('GraftCalc Ready');
+            app.addLog('GraftCal Ready');
         end
         
         function showStartupDialog(app)
@@ -138,13 +138,13 @@ classdef GraftCalV2 < matlab.apps.AppBase
             dlgY = (screenH - dlgH) / 2;
             
             % Create startup popup dialog centered on screen with scrollable content
-            dlg = uifigure('Position', [dlgX dlgY dlgW dlgH], 'Name', 'GraftCalc - User Guide', ...
+            dlg = uifigure('Position', [dlgX dlgY dlgW dlgH], 'Name', 'GraftCal - User Guide', ...
                 'NumberTitle', 'off', 'Resize', 'off', 'WindowStyle', 'modal');
             dlg.Color = [0.95 0.96 0.98];
             
             % Main Title
             titleLbl = uilabel(dlg, 'Position', [20 dlgH-70 dlgW-40 60], ...
-                'Text', '📊 GraftCalc - Graft Density Analysis Tool', ...
+                'Text', '📊 GraftCal - Graft Density Analysis Tool', ...
                 'FontSize', 24, 'FontWeight', 'bold', 'FontColor', [0.10 0.15 0.28], ...
                 'HorizontalAlignment', 'center', 'FontName', 'Segoe UI');
             
@@ -1074,7 +1074,7 @@ classdef GraftCalV2 < matlab.apps.AppBase
             W = screenSize(3);
             H = screenSize(4);
             
-            app.UIFigure = uifigure('Name', 'GraftCalc', ...
+            app.UIFigure = uifigure('Name', 'GraftCal', ...
                 'NumberTitle', 'off', 'WindowState', 'maximized');
             app.UIFigure.Position = [1 1 W H];
             app.UIFigure.Color = app.colorLightGray;
@@ -1088,7 +1088,7 @@ classdef GraftCalV2 < matlab.apps.AppBase
             % App Title
             app.AppTitleLabel = uilabel(app.ButtonPanel, ...
                 'Position', [20 10 300 50], ...
-                'Text', '▌ GraftCalc', ...
+                'Text', '▌ GraftCal', ...
                 'FontSize', 24, 'FontWeight', 'bold', ...
                 'FontColor', [1 1 1]);
             
